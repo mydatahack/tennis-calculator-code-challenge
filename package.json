@@ -1,0 +1,50 @@
+{
+  "name": "ultimate-tennis-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/main.js full_tournament.txt",
+    "build": "tsc",
+    "watch:build": "tsc --watch",
+    "test:watch": "mocha --require source-map-support/register -r ts-node/register --watch-files src, src/**/tests/*.spec.ts --watch",
+    "test": "nyc --reporter=html --reporter=text mocha --require source-map-support/register -r ts-node/register src/**/tests/*.spec.ts",
+    "test:int": "mocha --require source-map-support/register -r ts-node/register integration/*.spec.ts",
+    "test:int:watch": "mocha --require source-map-support/register -r ts-node/register --watch-files src, integration/*.spec.ts --watch"
+  },
+  "keywords": [],
+  "author": "Takahiro Honda",
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.13.0",
+    "@types/sinon": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^7.1.1",
+    "mocha-typescript": "^1.1.17",
+    "nock": "^12.0.3",
+    "nyc": "^15.0.1",
+    "sinon": "^9.0.2",
+    "ts-loader": "^7.0.1",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1"
+  }
+}
