@@ -4,29 +4,29 @@ This is the output for tennis calculator code challenge. The details of code cha
 
 # Get Started
 
-Need Node.js (above v.10) and latest npm installed.
+Use Node.js version 14 and latest yarn installed.
 
 ```bash
 # install dependencies
-npm i
+yarn i
 
 # Run application with default data file
-npm start
+yarn start
 
 # Run application with new data file (make sure to add the file to the data folder) 
-npm start -- <new file name> # e.g. npm start -- full_tournament_2.txt
+yarn start -- <new file name> # e.g. yarn start -- full_tournament_2.txt
 
 # Run test (using Mocha)
-npm run test
+yarn run test
 
 # Run Integration test
-npm run test:int
+yarn run test:int
 
 # watch test
-npm run test:watch
+yarn run test:watch
 
 # watch Integration test
-npm run test:int:watch
+yarn run test:int:watch
 ```
 
 # Solution Summary
